@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  button {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .forgotPassword {
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .forgotPassword a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .signupLink {
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .signupLink a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  

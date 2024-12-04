@@ -1,0 +1,51 @@
+.microphone-icon {
+    border-radius: 50%; /* گرد کردن دکمه */
+    border: 2px solid #ccc; /* اضافه کردن یک خط دور */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .microphone-icon.muted {
+    background-color: #f8d7da; /* رنگ پس زمینه در حالت میوت */
+  }
+  
+  .microphone-icon.unmuted {
+    background-color: #d4edda; /* رنگ پس زمینه در حالت غیر میوت */
+  }
+  
+  .microphone-icon.active {
+    color: green; /* رنگ سبز برای صدا */
+  }
+  
+  .microphone-icon.inactive {
+    color: red; /* رنگ قرمز برای قطع صدا */
+  }
+  .microphone-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .microphone-icon.active {
+    color: green;
+  }
+  
+  .microphone-icon.inactive {
+    color: red;
+  }
+  
+  .microphone-icon:active {
+    transform: scale(0.9);
+  }
+  
