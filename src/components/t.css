@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(68, 68, 68, 0.6); /* پس‌زمینه شیشه‌ای با شفافیت */
+  color: #555555;
+  text-align: left;
+  backdrop-filter: blur(10px); /* ایجاد افکت شیشه‌ای */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 2; /* محتوا باید بالای تصویر پس‌زمینه باشد */
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/images/background-image.png');
+  background-size: cover;
+  background-position: center;
+  animation: fadeInOut 15s infinite; /* انیمیشن محو و روشن شدن */
+  z-index: -1; /* تصویر پس‌زمینه باید پشت محتوای صفحه باشد */
+  filter: blur(10px); /* شروع با محو کردن تصویر */
+}
+
+@keyframes fadeInOut {
+  0% {
+    filter: blur(10px) brightness(0.4);
+  }
+  50% {
+    filter: blur(2px) brightness(1);
+  }
+  100% {
+    filter: blur(10px) brightness(0.4);
+  }
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 30px;
+  z-index: 2;
+}
+
+.tagline {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  z-index: 2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.welcome {
+  font-size: 2.3rem;
+  margin-top: 5px;
+  color: #34495e;
+  font-weight: 700;
+  z-index: 2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.description, .freeCalls {
+  font-size: 1rem;
+  margin: 20px 0;
+  line-height: 2.4;
+  padding: 0 20px;
+  max-width: 650px;
+  color: #444444;
+  z-index: 2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.callButton {
+  padding: 15px 70px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #696969;
+  color: #ffffff;
+  margin-top: auto;
+  margin-bottom: 70px;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.callButton:hover {
+  background-color: #777777;
+  transform: translateY(-5px);
+}
+
+.callButton:active {
+  background-color: #555555;
+  transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+  }
+
+  .welcome {
+    font-size: 1.8rem;
+  }
+
+  .description, .freeCalls {
+    font-size: 0.95rem;
+  }
+
+  .callButton {
+    font-size: 1rem;
+    padding: 12px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .welcome {
+    font-size: 1.4rem;
+  }
+
+  .description, .freeCalls {
+    font-size: 0.9rem;
+  }
+
+  .callButton {
+    font-size: 0.9rem;
+    padding: 15px 80px;
+  }
+}

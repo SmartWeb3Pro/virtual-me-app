@@ -1,0 +1,184 @@
+/* SettingsPage.module.css */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  
+  .slogan {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 88%;
+    max-width: 600px;
+    z-index: 2;
+  }
+  
+  .avatarsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .avatarBox {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .avatarBox.selected {
+    border-color: #4CAF50;
+  }
+  
+  .popupDropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .contactContainer {
+    margin-bottom: 20px;
+  }
+  
+  .newContactContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .newContactInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .addContactButton {
+    width:40%;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .addContactButton:hover {
+    background-color: #45a049;
+  }
+  
+  .continueButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .continueButton:hover {
+    background-color: #45a049;
+  }
+  
+  .closeButton {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .closeButton:hover {
+    background-color: #d0d0d0;
+  }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .popupContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .meetingLinkInput {
+    width: 80%;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .createButton,
+  .joinButton,
+  .copyButton,
+  .closeButton {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .createButton:hover,
+  .joinButton:hover,
+  .copyButton:hover,
+  .closeButton:hover {
+    background-color: #0056b3;
+  }
+  
