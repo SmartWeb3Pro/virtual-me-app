@@ -1,18 +1,155 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
-export default {
+const config: Config = {
+  darkMode: ['class'], // فعال‌سازی حالت تاریک با کلاس
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+   './app/**/*.{js,jsx,ts,tsx}', // مسیر پوشه‌ها
+    './components/**/*.{js,jsx,ts,tsx}',
+    './pages/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx}',       // فایل index.html
   ],
+  prefix: '', // پیشوند برای کلاس‌های Tailwind (در صورت نیاز می‌توانید تغییر دهید)
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px', // اندازه صفحه برای 2XL
+      },
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        dark: {
+          1: '#1C1F2E',
+          2: '#161925',
+          3: '#252A41',
+          4: '#1E2757',
+        },
+        blue: {
+          1: '#0E78F9',
+        },
+        sky: {
+          1: '#C9DDFF',
+          2: '#ECF0FF',
+          3: '#F5FCFF',
+        },
+        orange: {
+          1: '#FF742E',
+        },
+        purple: {
+          1: '#830EF9',
+        },
+        yellow: {
+          1: '#F9A90E',
+        },
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      backgroundImage: {
+        hero: "url('/images/hero-background.png')", // تصویر پس‌زمینه برای بخش قهرمان
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [
+    require('tailwindcss-animate'), // افزونه برای انیمیشن‌ها
+  ],
+};
+
+export default config;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import type { Config } from 'tailwindcss';
+
+// const config = {
+//   darkMode: ['class'],
+//   content: [
+//     './pages/**/*.{ts,tsx}',
+//     './components/**/*.{ts,tsx}',
+//     './app/**/*.{ts,tsx}',
+//     "./src/**/*.{js,jsx,ts,tsx}",
+//     "./public/index.html"
+//   ],
+//   prefix: '',
+//   theme: {
+//     container: {
+//       center: true,
+//       padding: '2rem',
+//       screens: {
+//         '2xl': '1400px',
+//       },
+//     },
+//     extend: {
+//       colors: {
+//         dark: {
+//           1: '#1C1F2E',
+//           2: '#161925',
+//           3: '#252A41',
+//           4: '#1E2757',
+//         },
+//         blue: {
+//           1: '#0E78F9',
+//         },
+//         sky: {
+//           1: '#C9DDFF',
+//           2: '#ECF0FF',
+//           3: '#F5FCFF',
+//         },
+//         orange: {
+//           1: '#FF742E',
+//         },
+//         purple: {
+//           1: '#830EF9',
+//         },
+//         yellow: {
+//           1: '#F9A90E',
+//         },
+//       },
+//       keyframes: {
+//         'accordion-down': {
+//           from: { height: '0' },
+//           to: { height: 'var(--radix-accordion-content-height)' },
+//         },
+//         'accordion-up': {
+//           from: { height: 'var(--radix-accordion-content-height)' },
+//           to: { height: '0' },
+//         },
+//       },
+//       animation: {
+//         'accordion-down': 'accordion-down 0.2s ease-out',
+//         'accordion-up': 'accordion-up 0.2s ease-out',
+//       },
+//       backgroundImage: {
+//         hero: "url('/images/hero-background.png')",
+//       },
+//     },
+//   },
+//   plugins: [require('tailwindcss-animate')],
+// } satisfies Config;
+
+// export default config;

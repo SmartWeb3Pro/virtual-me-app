@@ -1,0 +1,14 @@
+{
+    "welcome": "Welcome to our application!",
+    "description": "This is a sample application for localization.",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact Us",
+    "greeting": "Hello, {{name}}!",
+    "farewell": "Goodbye!",
+    "error": "An error occurred. Please try again.",
+    "success": "Operation completed successfully.",
+    "loading": "Loading, please wait...",
+    "settings": "Settings",
+    "profile": "Profile"
+  }
